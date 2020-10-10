@@ -16,6 +16,7 @@ TBD
 Pytorch 1.6
 
 ## Reproduce result in paper
+Change the device type in ```Params.py``` file and run:
 ```
 python3 test_learned.py
 ```

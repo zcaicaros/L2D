@@ -22,3 +22,10 @@ Change the device type in ```Params.py``` file and run:
 ```
 python3 test_learned.py
 ```
+
+## Or
+Change the device type in ```Params.py``` file and run:
+```
+python3 test_learned_on_benchmark.py
+```
+for open benchmark

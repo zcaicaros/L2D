@@ -13,11 +13,7 @@ If you make use of the code/experiment or L2D algorithm in your work, please cit
 title = {Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning},
 author = {Zhang, Cong and Song, Wen and Cao, Zhiguang and Zhang, Jie and Tan, Puay Siew and Xu, Chi},
 booktitle = {Advances in Neural Information Processing Systems 33},
-editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
-pages = {},
 year = {2020},
-publisher = {Curran Associates, Inc.},
-url = {}
 }
 ```
 

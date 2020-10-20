@@ -12,7 +12,6 @@ If you make use of the code/experiment or L2D algorithm in your work, please cit
 @incollection{NIPS2020_7527,
 title = {Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning},
 author = {Zhang, Cong and Song, Wen and Cao, Zhiguang and Zhang, Jie and Tan, Puay Siew and Xu, Chi},
-booktitle = {Advances in Neural Information Processing Systems 33},
 year = {2020},
 }
 ```

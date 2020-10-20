@@ -19,6 +19,7 @@ year = {2020},
 
 ## Installation
 Pytorch 1.6
+Gym 0.17.3
 
 ## Reproduce result in paper
 Change the device type in ```Params.py``` file and run:

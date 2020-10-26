@@ -4,7 +4,7 @@
 
 This repository is the official PyTorch implementation of the algorithms in the following paper: 
 
-Cong Zhang, Wen Song, Zhiguang Cao, Jie Zhang, Puay Siew Tan, Chi Xu. Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning. 34th Conference on Neural Information Processing Systems (NeurIPS), 2020. [\[PDF\]](https://github.com/zcajiayin/L2D/blob/main/paper/paper.pdf)
+Cong Zhang, Wen Song, Zhiguang Cao, Jie Zhang, Puay Siew Tan, Chi Xu. Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning. 34th Conference on Neural Information Processing Systems (NeurIPS), 2020. [\[PDF\]](http://arxiv.org/abs/2010.12367)
 
 
 If you make use of the code/experiment or L2D algorithm in your work, please cite our paper (Bibtex below).

@@ -66,6 +66,8 @@ class SJSSP(gym.Env, EzPickle):
                 self.adj[action, action - 1] = 1
             self.adj[action, precd] = 1
             self.adj[succd, action] = 1
+            if flag and precd != action and succd != action:  # Remove the old arc when a new operation inserts between two operations
+                self.adj[succd, precd] = 0
 
         # prepare for return
         fea = np.concatenate((self.LBs.reshape(-1, 1)/configs.et_normalize_coef,

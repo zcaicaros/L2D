@@ -9,11 +9,14 @@ Cong Zhang, Wen Song, Zhiguang Cao, Jie Zhang, Puay Siew Tan, Chi Xu. Learning t
 
 If you make use of the code/experiment or L2D algorithm in your work, please cite our paper (Bibtex below).
 ```
-@inproceedings{zhang2020learning,
+@inproceedings{NEURIPS2020_11958dfe,
  author = {Zhang, Cong and Song, Wen and Cao, Zhiguang and Zhang, Jie and Tan, Puay Siew and Chi, Xu},
  booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
  pages = {1621--1632},
+ publisher = {Curran Associates, Inc.},
  title = {Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning},
+ url = {https://proceedings.neurips.cc/paper/2020/file/11958dfee29b6709f48a9ba0387a2431-Paper.pdf},
  volume = {33},
  year = {2020}
 }

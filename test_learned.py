@@ -10,10 +10,10 @@ import numpy as np
 device = torch.device(configs.device)
 
 parser = argparse.ArgumentParser(description='Arguments for ppo_jssp')
-parser.add_argument('--Pn_j', type=int, default=100, help='Number of jobs of instances to test')
-parser.add_argument('--Pn_m', type=int, default=20, help='Number of machines instances to test')
-parser.add_argument('--Nn_j', type=int, default=20, help='Number of jobs on which to be loaded net are trained')
-parser.add_argument('--Nn_m', type=int, default=20, help='Number of machines on which to be loaded net are trained')
+parser.add_argument('--Pn_j', type=int, default=15, help='Number of jobs of instances to test')
+parser.add_argument('--Pn_m', type=int, default=15, help='Number of machines instances to test')
+parser.add_argument('--Nn_j', type=int, default=15, help='Number of jobs on which to be loaded net are trained')
+parser.add_argument('--Nn_m', type=int, default=15, help='Number of machines on which to be loaded net are trained')
 parser.add_argument('--low', type=int, default=1, help='LB of duration')
 parser.add_argument('--high', type=int, default=99, help='UB of duration')
 parser.add_argument('--seed', type=int, default=200, help='Seed for validate set generation')
@@ -115,6 +115,7 @@ def test(dataset):
     # print(result)
     # print(np.array(result, dtype=np.single).mean())
     np.save('drlResult_' + str(N_JOBS_N) + 'x' + str(N_MACHINES_N) + '_' + str(N_JOBS_P) + 'x' + str(N_MACHINES_P) + '_Seed' + str(SEED), np.array(result, dtype=np.single))
+    # print(np.array(result, dtype=np.single).mean())
 
 
 if __name__ == '__main__':

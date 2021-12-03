@@ -135,11 +135,11 @@ class PPO:
                                         padded_nei=None)
                 logprobs, ent_loss = eval_actions(pis.squeeze(), a_mb_t_all_env[i])
                 ratios = torch.exp(logprobs - old_logprobs_mb_t_all_env[i].detach())
-                advantages = rewards_all_env[i] - vals.detach()
+                advantages = rewards_all_env[i] - vals.view(-1).detach()
                 surr1 = ratios * advantages
                 surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages
                 v_loss = self.V_loss_2(vals.squeeze(), rewards_all_env[i])
-                p_loss = - torch.min(surr1, surr2)
+                p_loss = - torch.min(surr1, surr2).mean()
                 ent_loss = - ent_loss.clone()
                 loss = vloss_coef * v_loss + ploss_coef * p_loss + entloss_coef * ent_loss
                 loss_sum += loss
@@ -266,17 +266,17 @@ def main():
             memory.clear_memory()
         mean_rewards_all_env = sum(ep_rewards) / len(ep_rewards)
         log.append([i_update, mean_rewards_all_env])
-        if i_update % 100 == 0:
+        if (i_update + 1) % 100 == 0:
             file_writing_obj = open('./' + 'log_' + str(configs.n_j) + '_' + str(configs.n_m) + '_' + str(configs.low) + '_' + str(configs.high) + '.txt', 'w')
             file_writing_obj.write(str(log))
 
         # log results
         print('Episode {}\t Last reward: {:.2f}\t Mean_Vloss: {:.8f}'.format(
-            i_update, mean_rewards_all_env, v_loss))
+            i_update + 1, mean_rewards_all_env, v_loss))
         
         # validate and save use mean performance
         t4 = time.time()
-        if i_update % 99 == 0:
+        if (i_update + 1) % 100 == 0:
             vali_result = - validate(vali_data, ppo.policy).mean()
             validation_log.append(vali_result)
             if vali_result < record:

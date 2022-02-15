@@ -40,7 +40,7 @@ ppo = PPO(configs.lr, configs.gamma, configs.k_epochs, configs.eps_clip,
           hidden_dim_actor=configs.hidden_dim_actor,
           num_mlp_layers_critic=configs.num_mlp_layers_critic,
           hidden_dim_critic=configs.hidden_dim_critic)
-path = './{}.pth'.format(str(N_JOBS_N) + '_' + str(N_MACHINES_N) + '_' + str(LOW) + '_' + str(HIGH))
+path = './SavedNetwork/{}.pth'.format(str(N_JOBS_N) + '_' + str(N_MACHINES_N) + '_' + str(LOW) + '_' + str(HIGH))
 ppo.policy.load_state_dict(torch.load(path))
 g_pool_step = g_pool_cal(graph_pool_type=configs.graph_pool_type,
                          batch_size=torch.Size([1, env.number_of_tasks, env.number_of_tasks]),

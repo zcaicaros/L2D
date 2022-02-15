@@ -48,7 +48,7 @@ ENV CONDA_AUTO_UPDATE_CONDA=false \
     PATH=~/${project}-miniconda-environment/bin:$PATH
 RUN ~/${project}-miniconda-environment/bin/pip install \
     # install pytorch
-    torch==${torch_ver} torchvision==${torchvision_ver} torchaudio==${torchaudio_ver} -f https://download.pytorch.org/whl/${cuda_ver}/torch_stable.html \
+    torch==${torch_ver} torchvision==${torchvision_ver} -f https://download.pytorch.org/whl/${cuda_ver}/torch_stable.html \
     # install gym
     && ~/${project}-miniconda-environment/bin/pip install --upgrade pip \
     && ~/${project}-miniconda-environment/bin/pip install gym==${gym_ver}

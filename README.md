@@ -27,6 +27,19 @@ Pytorch 1.6
 
 Gym 0.17.3
 
+### Docker install
+Clone this repo and within the repo folder run the following command.
+
+Create image `l2d-image`:
+```commandline
+sudo docker build -t l2d-image .
+```
+
+Create container `l2d-container` from `l2d-image`, and activate it:
+```commandline
+sudo docker run --gpus all --name l2d-container -it l2d-image
+```
+
 ## Reproduce result in paper
 Change the device type in ```Params.py``` file and run:
 ```

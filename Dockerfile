@@ -8,7 +8,7 @@ ARG project=l2d
 ARG username=user
 ARG password=user
 ARG torch_ver=1.6.0
-ARG torchvision_ver=0.8.2
+ARG torchvision_ver=0.7.0
 ARG gym_ver=0.17.3
 
 

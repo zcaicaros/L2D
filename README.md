@@ -1,6 +1,5 @@
 # Learning to Dispatch for Job Shop Scheduling via Deep Reinforcement Learning
 
-## This is a temporary README.md, will update soon.
 
 This repository is the official PyTorch implementation of the algorithms in the following paper: 
 
